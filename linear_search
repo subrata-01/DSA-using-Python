@@ -1,0 +1,16 @@
+def linear_search(arr,n,key):
+    for j in range(n):
+        if arr[j]==key:
+            return j
+    return -1
+n=int(input("enter size of the array : "))
+import array as arr
+a=arr.array('i',[])
+for i in range(n):
+    a.append(int(input("enter the element : ")))
+key=int(input("enter the element you want to find : "))
+pos=linear_search(a,n,key)
+if pos==-1:
+    print("key not found...")
+else :
+    print("key found in ",pos," position ")
