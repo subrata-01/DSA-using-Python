@@ -1,0 +1,19 @@
+def binary_search(arr,beg,end,key):
+  if beg<=end:
+    mid=(beg+end)//2
+    if arr[mid]==key:
+      return mid
+    elif arr[mid]<key:
+      return binary_search(arr,mid+1,end,key)
+    else:
+      return binary_search(arr,beg,mid-1,key)
+  return -1
+
+
+arr=[1,3,5,7,9]
+key=int(input("Enter the element you want to found : "))
+pos=binary_search(arr,0,len(arr)-1,key)
+if pos!=-1:
+  print(f"element found in {pos} position")
+else:
+  print("Element not found")
