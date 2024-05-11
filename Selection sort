@@ -1,0 +1,15 @@
+def find_min(arr,i,n):
+  min_pos=i
+  while i<n:
+    if arr[min_pos]>arr[i]:
+      min_pos=i
+    i+=1
+  return min_pos
+arr=[64,25,22,10,11]
+for i in range(len(arr)):
+  j=find_min(arr,i,len(arr))
+  arr[i],arr[j]=arr[j],arr[i]
+print(arr)
+
+
+
