@@ -1,0 +1,8 @@
+a=[50,10,30,20,40]
+for i in range(len(a)-1,0,-1):
+  j=0
+  while j<i:
+    if a[j]>a[j+1]:
+      a[j],a[j+1]=a[j+1],a[j]
+    j+=1
+print(a)
